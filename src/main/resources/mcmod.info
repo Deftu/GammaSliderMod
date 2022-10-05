@@ -1,0 +1,16 @@
+[{
+    "modid": "${mod_id}",
+    "name": "${mod_name}",
+    "description": "Mod made for shoddy#9999 - 04/10/22",
+    "version": "${mod_version}",
+    "mcversion": "${mc_version}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+        "Deftu"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+}]

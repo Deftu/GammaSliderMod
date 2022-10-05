@@ -1,0 +1,9 @@
+{
+    "required": true,
+    "package": "xyz.deftu.gsm.mixins",
+    "compatibilityLevel": "JAVA_8",
+    "mixins": [
+        "ChunkMixin",
+        "WorldMixin"
+    ]
+}
