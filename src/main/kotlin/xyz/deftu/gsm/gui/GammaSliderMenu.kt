@@ -29,9 +29,9 @@ class GammaSliderMenu : UScreen(
     override fun initScreen(width: Int, height: Int) {
         slider = (object : GuiSlider(
             0,
-            width / 2 - 50,
+            width / 2 - 75,
             height / 2,
-            100,
+            150,
             20,
             "Gamma: ",
             "%",
@@ -48,7 +48,7 @@ class GammaSliderMenu : UScreen(
         }).also(buttonList::add)
         value = slider.value.toFloat()
 
-        buttonList.add(GuiButton(1, width / 2 - 50, height / 2 + 25, 100, 20, "Done"))
+        buttonList.add(GuiButton(1, width / 2 - 75, height / 2 + 25, 150, 20, "Done"))
         initialized = true
     }
 
@@ -62,20 +62,11 @@ class GammaSliderMenu : UScreen(
     override fun actionPerformed(button: GuiButton) {
         if (!button.enabled) return
         when (button.id) {
-            0 -> updateValue()
             1 -> {
                 updateValue()
                 restorePreviousScreen()
             }
         }
-    }
-
-    override fun onScreenClose() {
-        super.onScreenClose()
-        if (!initialized)
-            return
-
-        updateValue()
     }
 
     override fun doesGuiPauseGame() = false
